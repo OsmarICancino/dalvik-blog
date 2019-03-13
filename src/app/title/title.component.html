@@ -1,6 +1,13 @@
 <h1>Dalvik Blog - Angular Course</h1>
-<h3>{{ name }}</h3>
+<h3>Tutor: {{ name }}</h3>
+<p *ngIf="!isAvailable; else available" >Lanzamiento 18 may 2019</p>
 
-<button [disabled]="isAvailable" [ngClass]="{active : isAvailable, shadow : !isAvailable}" type="button" name="button">Inscribir</button>
+<ng-template #available>
+    <span class="highlight">Curso disponible</span>
+</ng-template>
+
+<div>
+    <button [disabled]="isAvailable" [ngClass]="{active : isAvailable, shadow : !isAvailable}" type="button" name="button">Inscribir</button>
+</div>
 
 <!-- <button [disabled]="isAvailable" [ngClass]="css_class" type="button" name="button">Inscribir</button> -->
