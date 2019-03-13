@@ -1,8 +1,28 @@
 :host {
   display: block;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  padding: 1em;
 }
 
 :host-context(.dark) h1{
-  background-color: black;
+  background-color: rgb(247, 247, 247);
+  color: black;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  padding: 1em;
+  font-size: 1em;
+}
+
+.active {
+  background-color: rgb(50, 50, 200);
   color: white;
+}
+
+button:not(.active) {
+  opacity: 0.56;
 }
