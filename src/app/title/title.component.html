@@ -1,4 +1,6 @@
 <h1>Dalvik Blog - Angular Course</h1>
 <h3>{{ name }}</h3>
 
-<button [disabled]="isAvailable" [class.active]="isAvailable" type="button" name="button">Inscribir</button>
+<button [disabled]="isAvailable" [ngClass]="{active : isAvailable, shadow : !isAvailable}" type="button" name="button">Inscribir</button>
+
+<!-- <button [disabled]="isAvailable" [ngClass]="css_class" type="button" name="button">Inscribir</button> -->

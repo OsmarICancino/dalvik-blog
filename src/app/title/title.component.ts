@@ -12,6 +12,7 @@ export class TitleComponent implements OnInit{
   public edad : number;
   public edades : number[];
   public isAvailable : boolean = true;
+  public css_class : string[] = ['active', 'shadow'];
 
   ngOnInit() {
     this.name = "Osmar Cancino";
