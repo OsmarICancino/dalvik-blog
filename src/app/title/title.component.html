@@ -1,10 +1,28 @@
 <h1>Dalvik Blog - Angular Course</h1>
-<h3>Tutor: {{ name }}</h3>
-<p *ngIf="!isAvailable; else available" >Lanzamiento 18 may 2019</p>
 
+<p *ngIf="!isAvailable; else available" >Lanzamiento 18 may 2019</p>
 <ng-template #available>
-    <span class="highlight">Curso disponible</span>
-</ng-template>
+        <span class="highlight">Curso disponible</span>
+    </ng-template>
+
+<h3>Tutor: {{ name }}</h3>
+
+<div>
+    <a>Más información <i class="fa " [ngClass]="{'fa-chevron-circle-down' : !moreInformation, 'fa-chevron-circle-up' : moreInformation}"></i></a>
+    <p *ngIf="moreInformation">Este es un curso example text  example text  example text  example text  example text  example text  example text  example text  example text </p>
+</div>
+
+<ul>
+    <li *ngFor="let topic of topics; index as position">
+        {{
+            position +1
+        }}
+        .-
+        {{
+            topic
+        }}
+    </li>
+</ul>
 
 <div>
     <button [disabled]="isAvailable" [ngClass]="{active : isAvailable, shadow : !isAvailable}" type="button" name="button">Inscribir</button>

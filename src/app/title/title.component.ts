@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'q';
 
 @Component({
   selector: "app-title",
@@ -9,22 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class TitleComponent implements OnInit{
 
   public name : string;
-  public edad : number;
-  public edades : number[];
   public isAvailable : boolean = true;
-  public css_class : string[] = ['active', 'shadow'];
+  public moreInformation : boolean = false;
+  public topics : string[];
 
   ngOnInit() {
     this.name = "Osmar Cancino";
-    this.edad = 23;
-
-    setTimeout(() => this.name = "Maricela :3", 3000)
-    setTimeout(() => this.isAvailable = false, 3000)
-
+    this.topics = [
+      "Domotica",
+      "Arduino",
+      "Android Development",
+      "iOS Development"
+    ];
   }
 
-
-  getEdadNombre() : string {
-    return `${this.name} : ${this.edad}`;
-  }
 }
