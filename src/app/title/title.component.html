@@ -3,12 +3,19 @@
 <p *ngIf="!isAvailable; else available" >Lanzamiento 18 may 2019</p>
 <ng-template #available>
         <span class="highlight">Curso disponible</span>
-    </ng-template>
+</ng-template>
+
+<div class="category" [ngSwitch]="category">
+    <span *ngSwitchCase="'web'">Web Development</span>
+    <span *ngSwitchCase="'mobile'">Mobile Development</span>
+    <span *ngSwitchCase="'other'">General Development</span>
+    <span *ngSwitchDefault>Not specified</span>
+</div>
 
 <h3>Tutor: {{ name }}</h3>
 
 <div>
-    <a>Más información <i class="fa " [ngClass]="{'fa-chevron-circle-down' : !moreInformation, 'fa-chevron-circle-up' : moreInformation}"></i></a>
+    <a (click)="toogleMoreInformation()" >Más información <i class="fa " [ngClass]="{'fa-chevron-circle-down' : !moreInformation, 'fa-chevron-circle-up' : moreInformation}"></i></a>
     <p *ngIf="moreInformation">Este es un curso example text  example text  example text  example text  example text  example text  example text  example text  example text </p>
 </div>
 
