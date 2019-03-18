@@ -19,4 +19,8 @@ export class UserCardComponent implements OnInit {
     this.avatar = 'https://cdn.dribbble.com/users/1430614/screenshots/5926312/image.png';
   }
 
+  changing(event: any) {
+    this.username = event.target.value;
+  }
+
 }

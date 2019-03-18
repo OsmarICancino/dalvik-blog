@@ -13,8 +13,7 @@
     display: grid;
     grid-template-areas: "imagen imagen username"
                          "imagen imagen name";
-    grid-template-rows: 100px 100px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr;
     grid-gap: 15px;
   }
 

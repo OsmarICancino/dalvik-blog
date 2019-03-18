@@ -2,4 +2,7 @@
   <img [src]="avatar" alt="User's Avatar">
   <p class="username">{{username}}</p>
   <p class="name">{{name}}</p>
+
+  <input type="text" (change)="changing($event)" value={{username}}>
+  <input type="text" (change)="name = $event.target.value" value={{name}}>
 </div>
