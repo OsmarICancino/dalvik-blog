@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dalvik-blog';
+
+  userSubcribed(ev : any) {
+    console.log('El usuaro se subscribio');
+    console.log(ev);
+  }
 }
+
+
