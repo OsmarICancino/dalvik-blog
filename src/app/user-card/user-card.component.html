@@ -4,5 +4,5 @@
   <p class="name">{{name}}</p>
 
   <input type="text" (change)="changing($event)" value={{username}}>
-  <input type="text" (change)="name = $event.target.value" value={{name}}>
+  <input type="text" [(ngModel)]="name">
 </div>

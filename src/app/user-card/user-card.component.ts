@@ -21,6 +21,7 @@ export class UserCardComponent implements OnInit {
     this.avatar = 'https://cdn.dribbble.com/users/1430614/screenshots/5926312/image.png';
 
     setTimeout(() => this.subscribed.emit(true), 3000);
+    setTimeout(() => this.name = "Maricela", 3000);
   }
 
   changing(event: any) {
